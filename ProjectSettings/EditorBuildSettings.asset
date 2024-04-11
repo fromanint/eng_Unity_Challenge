@@ -4,5 +4,15 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Project/Scenes/Main.unity
+    guid: b167fd3a6e0474757af30e684125a04b
+  - enabled: 1
+    path: Assets/_Project/Scenes/SelectCharacter.unity
+    guid: cd722f4172e1346678d10ef90bb02e5d
+  - enabled: 1
+    path: Assets/_Project/Scenes/Maze.unity
+    guid: 23de73d81f77c44e09b0fc535332a5d6
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
