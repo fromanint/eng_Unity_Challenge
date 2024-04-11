@@ -34,7 +34,7 @@ public class CharacterSelection : MonoBehaviour
     {
         if (index == previousSelected)
         {
-            AppManager appManager = FindObjectOfType<AppManager>();
+            AppManager appManager = FindFirstObjectByType<AppManager>();
             appManager.selectedCharacter = characterList[index];
             GetComponent<ChangeScene>().ChangeSceneOnClick(newSceneName);
         }
