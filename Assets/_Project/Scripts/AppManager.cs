@@ -5,6 +5,8 @@ using UnityEngine;
 public class AppManager : MonoBehaviour
 {
     public GameObject selectedCharacter;
+
+    public bool canFinish = false;
     // Start is called before the first frame update
     void Awake()
     {

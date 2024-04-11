@@ -5,8 +5,8 @@ using TMPro;
 
 public class TimeControl : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI timerText;
-    [SerializeField] TextMeshProUGUI pauseTimerText;
+    public TextMeshProUGUI timerText;
+    public TextMeshProUGUI pauseTimerText;
     float time = 0;
     int min, sec, ten;
 
