@@ -12,7 +12,7 @@ public class RandomSpawnMap : MonoBehaviour
     {
         int index = Random.Range(0, maps.Count);
         Instantiate(maps[index], Vector3.zero, Quaternion.identity);
-        
+        Destroy(this);        
     }
 
   

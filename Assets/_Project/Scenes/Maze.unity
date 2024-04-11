@@ -534,6 +534,7 @@ MonoBehaviour:
   maps:
   - {fileID: 4673355260737386246, guid: b20b3c49867de4ce2bd74b72a5ad5791, type: 3}
   - {fileID: 7976232472717943015, guid: ed0bb282d55a24bf1a903b8e9e870a51, type: 3}
+  miniMapCamera: {fileID: 0}
 --- !u!1 &280289242
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,7 +781,7 @@ GameObject:
   - component: {fileID: 820987325}
   - component: {fileID: 820987324}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: MiniMapCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -821,7 +822,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.78
+  orthographic size: 88
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -845,13 +846,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820987323}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &924071243
 GameObject:
   m_ObjectHideFlags: 0
