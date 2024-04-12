@@ -18,7 +18,7 @@ public class CharacterMovement : MonoBehaviour
     //Jump
     [SerializeField] float jumpHeight = 3f;
     [SerializeField] float gravity = -9.8f;
-    [SerializeField] float maxFallSpeed = 40f;
+    
     bool isGrounded;
     Vector3 velocity;
 
@@ -37,6 +37,7 @@ public class CharacterMovement : MonoBehaviour
     {
         trueSpeed = walkSpeed;
         controller = GetComponent<CharacterController>();
+        transform.position = Vector3.zero;
     }
 
     // Update is called once per frame

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Minimap
   - Collectible
+  - Floor
+  - MinimapPlayer
   layers:
   - Default
   - TransparentFX
