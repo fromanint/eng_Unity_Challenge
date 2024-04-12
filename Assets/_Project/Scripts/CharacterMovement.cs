@@ -12,7 +12,7 @@ public class CharacterMovement : MonoBehaviour
     [Header("Character Movement Settings")]
     [SerializeField] float groudedOffset = 0.01f;
     //Flat
-    [SerializeField]float walkSpeed = 1f;
+    [SerializeField] float walkSpeed = 1f;
     [SerializeField] float sprintSpeed = 3f;
     float trueSpeed;
     //Jump
@@ -22,13 +22,16 @@ public class CharacterMovement : MonoBehaviour
     bool isGrounded;
     Vector3 velocity;
 
+
     [Header("Camera Settings")]
     [SerializeField] Transform camera;
     [SerializeField] float turnSmoothTime = .1f;
-     float turnSmoothVelocity;
+    float turnSmoothVelocity;
 
-    
 
+    [Header("Animations")]
+    [SerializeField] Animator animations;
+    bool sprinting;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +43,7 @@ public class CharacterMovement : MonoBehaviour
     void Update()
     {
         isGrounded = Physics.CheckSphere(transform.position, groudedOffset, 1);
+        animations.SetBool("isGround", isGrounded);
         
         if(isGrounded && velocity.y < 0)
         {
@@ -50,10 +54,12 @@ public class CharacterMovement : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.LeftShift))
         {
             trueSpeed = sprintSpeed;
+            sprinting = true;
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             trueSpeed = walkSpeed;
+            sprinting = false;
         }
         movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         Vector3 direction = new Vector3(movement.x, 0, movement.y).normalized;
@@ -66,13 +72,32 @@ public class CharacterMovement : MonoBehaviour
             Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 
             controller.Move(moveDirection.normalized * trueSpeed * Time.deltaTime);
+
+            if (sprinting == true)
+            {
+                animations.SetFloat("Speed", 2);
+            }
+            else
+            {
+                animations.SetFloat("Speed", 1);
+            }
         }
+        else
+        {
+            animations.SetFloat("Speed", 0);
+        }
+        
+       
+
+
 
         //Jumping
-        Debug.Log(isGrounded + " is grounded");
+      
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt((jumpHeight * 10) * -2f * gravity);
+            animations.SetTrigger("Jump");
+                
         }
         
             velocity.y += gravity * Time.deltaTime;

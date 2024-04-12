@@ -10,7 +10,7 @@ public class RandomSpawnMap : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int index = Random.Range(0, maps.Count);
+        int index = Random.Range(0, maps.Count-1);
         Instantiate(maps[index], Vector3.zero, Quaternion.identity);
         Destroy(this);        
     }
