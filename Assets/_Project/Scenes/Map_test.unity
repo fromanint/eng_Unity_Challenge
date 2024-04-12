@@ -128,9 +128,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 310046228}
+  - component: {fileID: 310046229}
   m_Layer: 0
   m_Name: CollectibleFind
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,6 +152,27 @@ Transform:
   - {fileID: 1405483050}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &310046229
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310046227}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9579239, y: 1.572516, z: 0.8293772}
+  m_Center: {x: 0.12849045, y: -0.74829555, z: 0.28923368}
 --- !u!1001 &798492921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -249,8 +271,35 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.07496069, y: 0.02464324, z: 0.074571334}
-  m_Center: {x: 0, y: -0.0000007953495, z: 0}
+  m_Size: {x: 0.03730851, y: 0.011046595, z: 0.037423823}
+  m_Center: {x: -0.003660588, y: -0.006799123, z: -0.00015350431}
+--- !u!54 &1405483054
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405483039}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1422554997
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -370,7 +419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2840643221859219606, guid: 99c908c466d324ffbad0345a6c55c9d9, type: 3}
       propertyPath: m_TagString
-      value: Collectible
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6046750588902603990, guid: 99c908c466d324ffbad0345a6c55c9d9, type: 3}
       propertyPath: m_Size.x
@@ -409,6 +458,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2840643221859219606, guid: 99c908c466d324ffbad0345a6c55c9d9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1405483051}
+    - targetCorrespondingSourceObject: {fileID: 2840643221859219606, guid: 99c908c466d324ffbad0345a6c55c9d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1405483054}
   m_SourcePrefab: {fileID: 100100000, guid: 99c908c466d324ffbad0345a6c55c9d9, type: 3}
 --- !u!1 &4019837927668922135 stripped
 GameObject:
